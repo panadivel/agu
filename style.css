@@ -1,0 +1,74 @@
+.body {
+	background: url("img/giftly.png");
+    padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	background: #FFFFFF;
+	padding: 0;
+	height: 50px;
+	width: auto;
+}
+
+.header-picture {
+	display: block;
+	height: 300px;
+	background: url(img/header-background.jpg) no-repeat center;
+	background-size: 100% 100%;
+	border: 1px solid red;
+}
+
+.main-header {
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+.header-btn {
+	display: block;
+	padding: 12px 55px;
+	text-decoration: none;
+	color: #222;
+	text-shadow: 0px 2px 3px #666;
+	font-size: 20px;
+	border-left: 1px solid #EAEAEA;
+	/*border: 1px dotted grey;*/
+	float: left;
+	width: 80px;
+	text-align: center;
+	background: #FFFFFF;
+}
+
+.header-btn:last-child {
+	border-right: 1px solid #EAEAEA;
+}
+
+.header-btn:hover {
+	background-color: #3FDFFF;
+	transition-duration: 0.5s;
+}
+
+.header-btn:active {
+	color: #FF00AE;
+}
+
+.active {
+	color: #FF00AE;
+}
+
+.active:hover {
+	background-color: #FFFFFF;
+}
+
+.content {
+	display: block;
+	padding: 20px;
+	margin: 20px auto;
+	max-width: 720px;
+	background-color: white;
+	border: 1px solid #EAEAEA;
+	border-radius: 20px;
+	margin-top: 320px;
+
+}
