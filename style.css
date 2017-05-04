@@ -1,28 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+
 .body {
 	background: url("img/giftly.png");
+	background-attachment: fixed;
     padding: 0;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 }
 
 .header-picture {
-	display: block;
-	height: 260px;
-	background: url(img/header-background.jpg) no-repeat top center;
-	background-size: 100% 100%;
-	
+	max-width: 100%;
+	margin: -4px;
 }
 
 
 .main-header {
-	max-width: 780px;
-	height: 48px;
 	margin: 0 auto;
+	max-width: 780px;
+}
+
+.main-header:after {
+	content: " ";
+	display: table;
+	clear: both;
 }
 
 .header-btn {
 	display: block;
-	padding: 12px 57px;
+	padding: 12px 0;
 	text-decoration: none;
 	color: #222;
 	text-shadow: 0px 2px 3px #666;
@@ -30,7 +37,7 @@
 	border-left: 1px solid #EAEAEA;
 	/*border: 1px dotted grey;*/
 	float: left;
-	width: 80px;
+	width: 195px;
 	text-align: center;
 	background: #FFFFFF;
 }
@@ -46,11 +53,14 @@
 
 .header-btn:hover {
 	background-color: #3FDFFF;
+	transition-property: background-color;
 	transition-duration: 0.5s;
 }
 
 .header-btn:active {
 	color: #FF00AE;
+	transition-property: color;
+	transition-duration: 0.5s;
 }
 
 .active {
@@ -66,7 +76,7 @@
 	padding: 20px;
 	padding-top: 0;
 	margin: 20px auto;
-	max-width: 700px;
+	width: 57%;
 	background-color: white;
 	border: 2px solid #EAEAEA;
 	border-radius: 10px;
@@ -80,7 +90,6 @@
 }
 
 .welcome {
-
 	border: 2px solid #EAEAEA;
 	border-radius: 10px;
 	padding: 20px 0;
@@ -96,21 +105,21 @@
 .main-ul li {
 	font-size: 20px;
 	padding-left: 34px;
-	line-height: 42px;
+	line-height: 60px;
 	background: url(img/main-sprite.png) no-repeat
 }
 
 .main-ul .poems {
-	background-position: 0 4px;
+	background-position: 0px 10px;
 
 }
 
 .main-ul .anim {
-	background-position: 0 -58px;
+	background-position: 0 -50px;
 }
 
 .main-ul .games {
-	background-position: 0 -122px;
+	background-position: 0 -114px;
 }
 
 .main-ul a {
@@ -120,15 +129,160 @@
 
 .main-ul a:hover {
 	background-color: #3FDFFF;
+	transition-property: background-color;
 	transition-duration: 0.5s;
 }
 
 .main-ul a:active {
 	color: #FF00AE;
+	transition-property: color;
+	transition-duration: 0.5s;
 }
 
 footer.content {
 	min-height: 30px;
 	padding-bottom: 0px;
 	text-align: left;
+}
+
+.poem-content {
+	display: inline-block;
+	border: 1px solid red;
+	margin: 10px auto;
+	padding: 15px;
+	border: 2px solid #EAEAEA;
+	border-radius: 10px;
+	background-color: #EBE8D7;
+	box-shadow: 0px 2px 3px black;
+}
+
+.poems-header {
+	border: solid #EAEAEA 2px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 3px black;
+	padding: 5px;
+	background-color: white;
+}
+
+.left-nav-menu {
+	display: block;
+	float: left;
+	margin-top: 130px;
+	margin-left: 5%;
+	width: 16%;
+	background-color: white;
+	border: 2px solid #EAEAEA;
+	border-radius: 10px;
+	padding: 10px;
+
+}
+
+.left-nav-menu ul {
+	text-align: left;
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.left-nav-menu ul li {
+	font-size: 16px;
+	line-height: 20px;
+	padding-left: 0;
+	border-bottom: 2px solid #EAEAEA;
+}
+
+.left-nav-menu ul li:last-child {
+	border-bottom: none;
+}
+
+.left-nav-menu ul li a {
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.5s;
+}
+
+.left-nav-menu ul li a:hover {
+	background-color: #3FDFFF;
+	transition-property: background-color;
+}
+
+.left-nav-menu ul li a:active {
+	color: #FF00AE;
+	transition-property: color;
+}
+
+/*styles for cartoons page*/
+
+.cartoon-menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.cartoon-menu a {
+	width: 40%;
+	height: 250px;
+	border: 1px solid red;
+}
+
+/*
+
+<img src="img/kotenokgav.jpg" alt="kotenokgav">
+
+<img src="img/mashaimedved.jpg" alt="mashaimedved">
+
+.cartoon-menu img:nth-child(odd) {
+	float: left;
+	border: 1px solid red;
+}
+
+.cartoon-menu img:nth-child(even) {
+	float: right;
+	border: 1px solid red;
+}*/
+
+.content::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/*END styles for cartoons page*/
+
+/* applies to all widths 796px and smaller */
+@media screen and (max-width: 796px) {
+	.header-btn {
+		font-size: 40px;
+		float: left;
+		width: 90%;
+		margin-left: 5%;
+		border-bottom: 1px solid #EAEAEA;
+	}
+
+	.header-btn:first-child {
+	border-radius: 0;
+	}
+
+	.header-btn:last-child {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom: none;
+}
+
+	.content {
+		width: 90%;
+		font-size: 26px;
+	}
+
+	.main-ul li {
+	font-size: 26px;
+	padding-left: 34px;
+	line-height: 50px;
+	background: url(img/main-sprite.png) no-repeat
+	}
+	
+	.left-nav-menu {
+		display: none;
+	}
+
 }
